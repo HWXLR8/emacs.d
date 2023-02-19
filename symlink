@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+
+echo "creating .emacs.d if it doesn't exist"
+mkdir -p ~/.emacs.d
+
+echo "creating links"
+ln -svf $SCRIPT_DIR/init.el ~/.emacs.d/init.el
+ln -svf $SCRIPT_DIR/sourcepair.el ~/.emacs.d/sourcepair.el
