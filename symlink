@@ -8,3 +8,4 @@ mkdir -p ~/.emacs.d
 echo "creating links"
 ln -svf $SCRIPT_DIR/init.el ~/.emacs.d/init.el
 ln -svf $SCRIPT_DIR/sourcepair.el ~/.emacs.d/sourcepair.el
+ln -svf $SCRIPT_DIR/theme ~/.emacs.d/theme
