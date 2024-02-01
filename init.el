@@ -6,9 +6,16 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")
   (package-refresh-contents))
 
-(dolist (p '(bind-key expand-region multiple-cursors
-		      expand-region swiper rainbow-mode
-		      paredit web-mode yasnippet hungry-delete))
+(dolist (p '(bind-key
+	     expand-region
+	     multiple-cursors
+	     expand-region
+	     swiper
+	     hungry-delete
+	     rainbow-mode
+	     web-mode
+	     yaml-mode
+	     gnuplot-mode))
   (package-install p))
 
 (defun user-mc/expand-or-mark-next-symbol ()
@@ -79,3 +86,18 @@
 ;; file modes
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("28b1e42cbe1c571d52fec3056ea9448ccbd8673c1e2c495df2219da4293da93e" default))
+ '(package-selected-packages
+   '(scad-mode cmake-mode yaml-mode hungry-delete yasnippet web-mode paredit rainbow-mode swiper multiple-cursors expand-region bind-key)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
