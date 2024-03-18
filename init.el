@@ -33,7 +33,6 @@
 (require 'multiple-cursors)
 (require 'expand-region)
 (require 'swiper)
-(require 'paredit)
 (require 'hungry-delete)
 
 ;; source pair
