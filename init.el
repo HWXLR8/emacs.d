@@ -15,7 +15,8 @@
 	     rainbow-mode
 	     web-mode
 	     yaml-mode
-	     gnuplot-mode))
+	     gnuplot-mode
+             dockerfile-mode))
   (package-install p))
 
 (defun user-mc/expand-or-mark-next-symbol ()
