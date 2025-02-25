@@ -89,5 +89,8 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 
+;; org mode
+(add-hook 'org-mode-hook 'org-indent-mode)
+
 ;; redirect custom bullshit to a separate file
 (setq custom-file (concat user-emacs-directory "custom.el"))
