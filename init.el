@@ -94,3 +94,10 @@
 
 ;; redirect custom bullshit to a separate file
 (setq custom-file (concat user-emacs-directory "custom.el"))
+
+;; always follow git symlinks
+(setq vc-follow-symlinks t)
+
+;; use spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+(setq-default tabs-width 4)
