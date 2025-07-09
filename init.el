@@ -7,15 +7,16 @@
   (package-refresh-contents))
 
 (dolist (p '(bind-key
-	     expand-region
-	     multiple-cursors
-	     expand-region
-	     swiper
-	     hungry-delete
-	     rainbow-mode
-	     web-mode
-	     yaml-mode
-	     gnuplot-mode))
+             expand-region
+             multiple-cursors
+             expand-region
+             swiper
+             hungry-delete
+             rainbow-mode
+             web-mode
+             yaml-mode
+             gnuplot-mode
+             scad-mode))
   (package-install p))
 
 (defun user-mc/expand-or-mark-next-symbol ()
@@ -48,6 +49,10 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; properly recognize arrow keys
+(define-key input-decode-map "\e[1;5A" [C-up])
+(define-key input-decode-map "\e[1;5B" [C-down])
+
 (bind-key "RET" 'multiple-cursors-mode mc/keymap)
 (bind-keys
  ("C-<down>" . mc/mmlte--down)
@@ -66,7 +71,8 @@
  ("M-r" . query-replace)
  ("C-u" . undo)
  ("C-h" . sourcepair-load)
- ("C-t" . hungry-delete-forward))
+ ("C-t" . hungry-delete-forward)
+ )
 
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook
