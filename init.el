@@ -16,7 +16,10 @@
              web-mode
              yaml-mode
              gnuplot-mode
-             scad-mode))
+             scad-mode
+             arduino-mode
+             dockerfile-mode
+             ))
   (package-install p))
 
 (defun user-mc/expand-or-mark-next-symbol ()
@@ -52,6 +55,18 @@
 ;; properly recognize arrow keys
 (define-key input-decode-map "\e[1;5A" [C-up])
 (define-key input-decode-map "\e[1;5B" [C-down])
+(define-key input-decode-map "\e[1;5C" [C-right])
+(define-key input-decode-map "\e[1;5D" [C-left])
+
+(define-key input-decode-map "\e[3;5A" [M-up])
+(define-key input-decode-map "\e[3;5B" [M-down])
+(define-key input-decode-map "\e[3;5C" [M-right])
+(define-key input-decode-map "\e[3;5D" [M-left])
+
+(define-key input-decode-map "\e[1;4A" [M-S-up])
+(define-key input-decode-map "\e[1;4B" [M-S-down])
+(define-key input-decode-map "\e[1;4C" [M-S-right])
+(define-key input-decode-map "\e[1;4D" [M-S-left])
 
 (bind-key "RET" 'multiple-cursors-mode mc/keymap)
 (bind-keys
@@ -89,7 +104,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/theme")
 (menu-bar-mode -1)
 (blink-cursor-mode -1)
-(load-theme 'soft t)
+;;(load-theme 'soft t)
 
 ;; file modes
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
