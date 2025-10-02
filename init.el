@@ -19,6 +19,7 @@
              scad-mode
              arduino-mode
              dockerfile-mode
+             glsl-mode
              ))
   (package-install p))
 
