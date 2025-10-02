@@ -20,6 +20,7 @@
              arduino-mode
              dockerfile-mode
              glsl-mode
+             json-mode
              ))
   (package-install p))
 
