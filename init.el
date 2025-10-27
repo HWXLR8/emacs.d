@@ -21,6 +21,7 @@
              dockerfile-mode
              glsl-mode
              json-mode
+             cmake-mode
              ))
   (package-install p))
 
