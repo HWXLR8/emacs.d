@@ -22,6 +22,7 @@
              glsl-mode
              json-mode
              cmake-mode
+             ca65-mode
              ))
   (package-install p))
 
