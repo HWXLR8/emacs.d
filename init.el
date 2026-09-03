@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'package)
 
 (defvar melpa '("melpa" . "http://melpa.org/packages/"))
@@ -126,3 +127,12 @@
 ;; use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tabs-width 4)
+
+;; breaks on wayland
+(xterm-mouse-mode -1)
+
+;; TRAMP settings
+(setq tramp-auto-save-directory "~/.emacs.d/tramp-autosave")
+
+;; C mode
+(add-hook 'c-mode-hook (lambda () (c-set-offset 'case-label '+)))
